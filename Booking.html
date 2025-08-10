@@ -1,0 +1,104 @@
+<html>
+  <head>
+    <title>Hotel Malkat Shva</title>
+	<link rel="icon" href="assets/icons/Icon picture.png">
+	<link rel="stylesheet" href="Hotel.css">
+	<script src="Hotel.js"></script>
+	<script src="PrintSaveInformationHotel.js"></script>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  </head>
+  <body>
+  
+    <table id="bookaroom" style = "width: 900" cellspacing="15">
+	<td><button type="button" id="goto_main-page" onclick="location.href='Hotel.html' ">Main page</button></td>
+	<form>
+	<tr id="book_room">
+    <h2><b>BOOK A ROOM</b></h2>
+	</tr>
+	
+	<!---ID--->
+    <tr>
+	  <td>
+	  Id: <input type="text" id="id" name="id">
+	  <div id="id_error" style="color: red;"></div>
+	  </td>
+	  
+    </tr>
+	<!---Date selector--->
+    <tr>
+	  <td><label for="Arrival">Arrival date: </label><input type="date" id="start" name="trip-start"/></td>
+	  <td><label for="Departure">Departure date: </label><input type="date" id="end" name="trip-end" /></td></br>
+    </tr>
+	<!---amount of adults + kids--->
+    <tr>
+		<td>Amount of adults:
+			<select id="adults_amount" name="adults_amount">
+				<option hidden value="select">select</option>
+				<option value="1">1</option>
+				<option value="2">2</option>
+				<option value="3">3</option> 
+				<option value="4">4</option>
+			</select>
+		</td> 
+		<td>Amount of kids:
+		   <select id="kids_amount" name="kids_amount">
+				<option hidden value="select">select</option>
+				<option value="1">1</option>
+				<option value="2">2</option>
+				<option value="3">3</option> 
+				<option value="4">4</option>
+			</select>
+		</td> 
+	</tr>
+	<!---room choice + msg request--->
+    <tr>
+	    <td id="room_radio">Room choosing:</br>
+			<input type="radio" id="double_room" name="room_choosing" value="double_room">double_room</br>
+			<input type="radio" id="double_room_delux" name="room_choosing" value="double_room_delux">double_room_delux</br>
+			<input type="radio" id="family_room" name="room_choosing" value="family_room">family_room</br>
+			<input type="radio" id="suite" name="room_choosing" value="suite">suite</td>
+		<!---Hotel services hoverImage--->
+		<td>
+			<!---The block that showcases the information of the hotel will be hidden at first until onmouseover event will be activated--->
+			<p id="hoverText" class="styled-text" onmouseover="ShowInformation()" onmouseout="HideInformation()">Hotel services</p>
+			<div id="InfoPic" class="image-container">  
+				<img src="assets/sources/inthehotel.jpg" alt="Information Picture" id="hoverImage">
+			</div>
+		</td>
+	</tr>
+    <tr>
+		   <td>Special requests:</br>
+  	       <textarea name="msg" rows="5" cols="60" id="t_area"></textarea></br>
+	</tr>
+	</form>
+<tr>
+	<!---more details--->
+		<td>
+			<button onclick="Display_text()" id="toggleButton">More information</button>
+            <div id="myDIV">
+                <p>
+                    <b><ins>Contact us:</b></ins> malkashva@.com, 088769629<br><br>
+                    <b><ins>Check-in & Check-out:</b></ins><br>
+                    Sun-Fri: Rooms are available at 3:00pm, check out by 12am.<br>
+                    Sat and Holidays: Rooms are available at 6:00pm, check out by 2:00pm.<br><br>
+					<b><ins>Parking:</b></ins> Parking is free in the hotel's lot and nearby area.<br><br>
+					<b><ins>Internet & WiFi:</b></ins> Free Wi-Fi connection is available in all rooms and public areas.<br><br>
+					<b><ins>Information for Observant Jews:</b></ins> The hotel includes a synagogue, a Shabbat elevator
+					and a Shabbat clocks (please order in advance).<br><br>
+                </p>
+            </div>
+        </td>
+	</tr>
+	<!---submit and reset buttons--->
+	<tr>
+		<td><button type="button" class="buttons" value=" Submit" onclick="form_submit()">Submit</button></td>
+		<td><button type="button" class="buttons" value=" Reset" onclick="form_reset()">Reset</button></td>
+	</tr>
+   </table>
+     <!-- Container for Order Information -->
+   	 <div id="free_text_container">
+        <h5 id="free_text"></h5>   <!---free_text(order information)--->
+    </div>
+  </body>
+
+</html>

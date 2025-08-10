@@ -1,0 +1,197 @@
+<html>
+  <head>
+    <title>Hotel Malkat Shva</title>
+	<link rel="icon" href="assets/icons/Icon picture.png">
+	<link rel="stylesheet" href="Hotel.css">
+	<script src="Hotel.js"></script>
+	<script src="PrintSaveInformationHotel.js"></script>
+    <script src="https://static.elfsight.com/platform/platform.js" data-use-service-core defer></script>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+  </head>
+  <body>
+   <div class="header-container">
+	<h1><span id="headtext"> Hotel Malkat Shva</h1>
+		<!-- Social Media Icons and Widget -->
+	<a href="Booking.html#book_room" id="jumplink">Book Now </a> <!-- Updated href to point to Booking.html -->
+	<div class="fixed-widget">
+		<a href="https://www.facebook.com/QueenOfShebaEilat/?locale=he_IL" target="_blank" class="fa fa-facebook" id="facebook" ></a>
+		<a href="https://www.instagram.com/queenofshebaeilat/?locale=nl&hl=af" target="_blank" class="fa fa-instagram" id="instagram"></a>
+	</div>
+	</div>
+	
+	<!---Broll--->
+	<div class="video-container">
+		<video id="b-roll" class="b-roll" autoplay muted loop>
+			<source src="assets/sources/b-roll.mp4" type="video/mp4">
+		</video>
+    <div class="text-container" id="txtinf">
+		<p>The Queen of Shva Eilat Hotel is in the heart of the city of Eilat, in a place where the Red Sea and the desert mountains enjoy the warm sun.</p>
+		<p>The hotel, which was inspired by the biblical palace of the Queen of Sheba, offers its guests all the possible means of comfort, in a luxurious and stunningly beautiful building.</p>
+		<p>The hotel offers 481 beautiful and furnished rooms, luxurious suites with an outdoor jacuzzi facing the sea and rooms adapted exactly for families, a view of the Red Sea bay, the romantic lagoon and the desert mountains.</p>
+		<p>The Queen of Shva Eilat Hotel Promenade offers a variety of shops and an entertainment center for the whole family.</p>
+    </div>
+	
+	<!---carousel--->
+	<table id="carusel_table">
+		<tr>	
+		<div class="carousel">
+			<div class="carousel-inner">
+				<img src="assets/sources/room_pic1.jpg" alt="Image_room", id="room_img">
+			</div>
+		</br></tr>
+		<tr>
+		<!---prev and next--->
+		<div class="carousel-controls">
+			<button type="button" id="button_prev" onclick="button_prev()"><p> <i class="arrow left"></i></p></button>
+    		<button type="button" id="button_next" onclick="button_next()"><p> <i class="arrow right"></i></p></button>
+		</div>
+			</tr>
+		</div>
+
+	</table>
+	<table id= "rooms2">
+	  <tr id="row1">
+	    <td>
+	<!-- Ordered List -->
+    <div class="steps-container">
+        <h2>Steps to Book a Room:</h2>
+        <ol>
+            <li>Select your arrival and departure dates.</li>
+            <li>Choose the number of adults and children.</li>
+            <li>Select your preferred room type.</li>
+            <li>Fill in your personal details.</li>
+            <li>Submit your special requests, if any.</li>
+            <li>Click on 'Submit' to finalize your booking.</li>
+        </ol>
+    </div>
+	</td>
+	<td>
+	<img src="assets/sources/hotel.jpg" width="700" height="400">
+	</td>
+	</tr>
+	<tr id="row2">
+	<td>
+
+	       <!-- Room List and Information -->
+       
+         <div class="room-list-container">
+           <h2>Our Rooms</h2>
+           <ul class="room-list">
+              <li onclick="showRoomInfo('double_room')"style="background-color: #B1A694;">Double Room</li>
+              <li onclick="showRoomInfo('double_room_delux')"style="background-color:#B1A694;">Double Room Delux</li>
+              <li onclick="showRoomInfo('family_room')"style="background-color: #B1A694;">Family Room</li>
+              <li onclick="showRoomInfo('suite')"style="background-color: #B1A694;">Suite</li>
+           </ul>
+		   </div>
+		</td>
+        <td>
+         <div id="roomInfo" class="room-info">
+            <h3>Room Information</h3>
+            <p id="roomDetails">Click on a room type to see the details.</p>
+			 <img id="roomImage" src="" alt="Room Image" style="display:none;">
+         </div>
+		 </td>
+		 </tr>
+
+		</table>
+		<table>
+			<td>
+				<div class ="card">
+					<img class="img-room" src="assets/Rooms/double_room.jpg">
+					<h4>Double room</h4>
+					<h5>1 full bed</h5>
+					- Private Bathroom<br></br>
+					- Mini Refrigerator<br></br>
+					- Flat-screen TV<br></br>
+					- Heating and A/C Controls<br></br>
+					- Hairdryer<br></br>
+					- WiFi<br></br>
+					<span class="RoomPrice">Price: </span>
+				</div>
+			</td>
+			<td>
+				<div class ="card">
+					<img class="img-room" src="assets/Rooms/double_room_delux.jpg">
+					<h4>Double Delux</h4>
+					<h5>1 full bed</h5>
+					- Private Bathroom<br></br>
+					- Mini Refrigerator<br></br>
+					- Flat-screen TV<br></br>
+					- Heating and A/C Controls<br></br>
+					- Hairdryer<br></br>
+					- WiFi<br></br>
+					<span class="RoomPrice">Price: </span>
+				</div>
+			</td>
+			<td>
+				<div class ="card">
+					<img class="img-room" src="assets/Rooms/family_room.jpg">
+					<h4>Family Room</h4>
+					<h5>1 full bed & 2 private</h5>
+					- Private Bathroom<br></br>
+					- Mini Refrigerator<br></br>
+					- Flat-screen TV<br></br>
+					- Heating and A/C Controls<br></br>
+					- Hairdryer<br></br>
+					- WiFi<br></br>
+					<span class="RoomPrice">Price: </span>
+				</div>
+				</div>
+			</td>
+			<td>
+				<div class ="card">
+					<img class="img-room" src="assets/Rooms/suite.jpg">
+					<h4>Suite</h4>
+					<h5>1 full bed</h5>
+					- Private Bathroom & Jacuzzi<br></br>
+					- Mini Refrigerator<br></br>
+					- Flat-screen TV<br></br>
+					- Heating and A/C Controls<br></br>
+					- Hairdryer<br></br>
+					- WiFi<br></br>
+					<span class="RoomPrice">Price: </span>
+				</div>
+			</td>	
+	</table>
+			<div class="elfsight-app-3207d50f-0751-454c-911b-d3aca551138b" data-elfsight-app-lazy></div> <!--instgram-->
+	<!---Google Reviews Saas--->
+    <table style = "width: 720" cellspacing="15">
+
+    <div class="mapAcontainer">
+    <div class="image">
+        <img src="assets/sources/nearby.png" alt="Information Picture">
+    </div>
+	
+	<div class="map">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3470.8315500732633!2d34.964366125008596!3d29.550399541810336!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x150071f0022336a7%3A0x13036fd859592bca!2z157XnNeV158g157XnNeb16og16nXkdeQ!5e0!3m2!1siw!2sil!4v1720445003279!5m2!1siw!2sil" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
+    </div>
+	
+	<script src="https://static.elfsight.com/platform/platform.js" data-use-service-core defer></script> <!--reviews-->
+	<div class="elfsight-app-7a7a4ed0-870e-44ec-a071-cde5b71220e1" data-elfsight-app-lazy></div>
+	
+	<!---Delete client section--->
+	<tr>
+		<td><label id = "Delete_text" style="display:none">Enter id to delete: </label></td>
+		<td><input type="text" id="Delete_client_enter" name="Delete_client_enter" style="display:none"></td>  <!---after clicking on 'Delete spesific order' will ask for id to be deleted from the users--->
+		<td><button type="button" id="button_delete_accept" onclick="delete_Spesific_Client()" style="display:none">Confirm</button></td>  <!---asking for deleting a reservation--->
+	</tr>
+	</table>
+	<!---Information about the clients list--->
+	<table>
+	<tr>
+		<p id="printAllClients"></p>  <!---after clicking on 'Gather All Orders' will show all the orders that are saved in the local DB--->
+	</tr>
+	<!---Interaction buttons--->
+	<tr>
+			<!---The admin button will be invisible unless there was a signin in--->
+			<td><button type="button" id="goto_sign-in" class="btn-custom" onclick="location.href='Sign-in.html'">Sign-in</button></td>
+            <td><button type="button" id="goto_booking" class="btn-custom" onclick="location.href='Booking.html'">Booking</button></td>
+            <td><button type="button" id="goto_admin" class="btn-custom" onclick="location.href='Admin.html'" style="display:none;">Admin</button></td>
+
+	</tr>
+	</table>
+  </body>
+</html>

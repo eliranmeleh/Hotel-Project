@@ -1,0 +1,32 @@
+<html>
+<head>
+    <title>Sign In</title>
+    <link rel="stylesheet" href="Hotel.css">
+	<style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f0f0f0;
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+	</style>
+</head>
+<body>
+    <div class="login-container">
+        <h1> Admin Sign In</h1>
+        <form id="loginForm">
+            <label for="username">Username:</label>
+            <input type="text" id="username" name="username" required>
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required>
+            <button type="submit">Sign In</button>
+        </form>
+        <p id="errorMessage" class="error-message"></p>
+        <a href="Hotel.html" class="main-page-button">Return to Main Page</a>
+    </div>
+    <script src="Hotel.js"></script>
+</body>
+</html>

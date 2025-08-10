@@ -1,0 +1,64 @@
+<html>
+  <head>
+    <title>Hotel Malkat Shva</title>
+	<link rel="icon" href="assets/icons/Icon picture.png">
+	<link rel="stylesheet" href="Hotel.css">
+	<script src="Hotel.js"></script>
+	<script src="PrintSaveInformationHotel.js"></script>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  </head>
+  <body>
+	<table>
+	<!---Delete client section--->
+	<tr>
+		<td><label id = "Delete_text" class="admin-label" style="display:none">Enter id to delete: </label></td>
+		<td>
+			<input type="text" id="Delete_client_enter" name="Delete_client_enter" style="display:none">
+			<div id="id_error_admin" style="color: red;"></div>
+		</td>  <!---after clicking on 'Delete spesific order' will ask for id to be deleted from the users--->
+		<td><button class="admin-button" type="button" id="button_delete_accept" onclick="delete_Spesific_Client()" style="display:none">Confirm</button></td> </br> <!---asking for deleting a reservation--->
+		
+
+	</tr>
+	</table>
+	  <!---DB interaction buttons {Clients}--->
+	<table>
+	<tr>
+        <td><button class="admin-button" type="button" id="goto_Hotel" onclick="confirmSignOut()">Sign Out</button></td>  </br>
+		<td><button class="admin-button" type="button" id="button_printall" onclick="getAllClients()">Gather All Orders</button></td>
+		<td><button class="admin-button" type="button" id="button_clearall" onclick="clearAllClients()">Clear All Orders</button></td>
+		<td><button class="admin-button" type="button" id="button_deleterow" onclick="show_Delete_Client()">Delete A Specific Order</button></td>
+		<td><button class="admin-button" type="button" id="button_deleteall" onclick="deleteAllClients()">Delete All Orders</button></td>
+	</tr>
+	</table>
+	<!---Information about the clients list--->
+	<table>
+	<tr>
+		<p id="printAllClients"></p>  <!---after clicking on 'Gather All Orders' will show all the orders that are saved in the local DB--->
+	</tr>
+	</table>
+	<!---Room price edit if needed--->
+	<table>
+	<tr>
+	<label id="change_prices_label" class="admin-label change-prices-label">
+		Change Prices Here:
+	</label>
+	  <td>Double Room: <input type="text" id="Double_Room_Edit" name="Double_Room_Edit"></td> </br>
+	  <td>Double Room Delux: <input type="text" id="Double_Room_Delux_Edit" name="Double_Room_Delux_Edit"></td> </br>
+	  <td>Family Room: <input type="text" id="Family_Room_Edit" name="Family Room_Edit"></td>  </br>
+	  <td>Suite: <input type="text" id="Suite_Edit" name="Suite_Edit"></td>  </br>
+	  <td><button class="admin-button" type="button" id="button_prices_edit" onclick="Edit_Room_prices()">Submit</button></td>  </br>
+	  <td><button class="admin-button" type="button" id="button_print_room_prices" onclick="getAllRoomPrices()">Print Rooms Prices</button></td>
+	</tr>
+	<tr>
+	  <td><div id="error_message_admin_rooms" style="color: red;"></div></td>
+	</tr>
+	</table>
+	<!---Information about the rooms list--->
+	<table>
+	<tr>
+		<p id="printAllRoom-types"></p>  <!---after clicking on 'Gather All Orders' will show all the orders that are saved in the local DB--->
+	</tr>
+	</table>
+  </body>
+</html>
